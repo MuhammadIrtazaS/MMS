@@ -52,6 +52,7 @@ namespace MMS.Forms.Attendance
                     name_lbl.Text = "User not found";
                     roll_no_fld.Text = "";
                 }
+                GridView1.DataBind();
             }
         }
     }
