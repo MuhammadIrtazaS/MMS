@@ -14,44 +14,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content">
         <div class="data">
-            <asp:Table ID="Table1" runat="server">
-            <asp:TableRow runat="server" TableSection="TableHeader">
-                <asp:TableCell runat="server">Meal</asp:TableCell>
-                <asp:TableCell runat="server">Message</asp:TableCell>
-                <asp:TableCell runat="server">Rattings</asp:TableCell>
-                <asp:TableCell runat="server">User</asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow runat="server">
-                <asp:TableCell runat="server">Biryani</asp:TableCell>
-                <asp:TableCell runat="server">Too much spicy</asp:TableCell>
-                <asp:TableCell runat="server">4.0</asp:TableCell>
-                <asp:TableCell runat="server">haider</asp:TableCell>
-            </asp:TableRow>
-                 <asp:TableRow runat="server">
-     <asp:TableCell runat="server">Mutton</asp:TableCell>
-     <asp:TableCell runat="server">Too much cold</asp:TableCell>
-     <asp:TableCell runat="server">2.0</asp:TableCell>
-     <asp:TableCell runat="server">Sufyan</asp:TableCell>
- </asp:TableRow>
-                 <asp:TableRow runat="server">
-     <asp:TableCell runat="server">Beaf</asp:TableCell>
-     <asp:TableCell runat="server">Too much hard</asp:TableCell>
-     <asp:TableCell runat="server">2.0</asp:TableCell>
-     <asp:TableCell runat="server">Sami ul Haq</asp:TableCell>
- </asp:TableRow>
-                 <asp:TableRow runat="server">
-     <asp:TableCell runat="server">Fried Rice</asp:TableCell>
-     <asp:TableCell runat="server">Too much spicy</asp:TableCell>
-     <asp:TableCell runat="server">1.0</asp:TableCell>
-     <asp:TableCell runat="server">Irtaza</asp:TableCell>
- </asp:TableRow>
-                 <asp:TableRow runat="server">
-     <asp:TableCell runat="server">Biryani</asp:TableCell>
-     <asp:TableCell runat="server">Too much spicy</asp:TableCell>
-     <asp:TableCell runat="server">4.0</asp:TableCell>
-     <asp:TableCell runat="server">Usman Shehzad</asp:TableCell>
- </asp:TableRow>
-        </asp:Table>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                <Columns>
+                    <asp:BoundField DataField="text" HeaderText="text" SortExpression="text" />
+                    <asp:BoundField DataField="ratings" HeaderText="ratings" SortExpression="ratings" />
+                    <asp:BoundField DataField="meal" HeaderText="meal" SortExpression="meal" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mms_dbConnectionString2 %>" SelectCommand="SELECT [text], [ratings], [meal] FROM [feedback]"></asp:SqlDataSource>
 
         </div>
     </div>

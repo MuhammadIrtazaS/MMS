@@ -23,7 +23,7 @@ namespace MMS.Forms.Registration
             cmd.Parameters.AddWithValue("@name", name_fld.Text);
             cmd.Parameters.AddWithValue("@password", password_fld.Text);
 
-            using(SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sami\\source\\repos\\SamiUlHaq27\\MMS\\MMS\\App_Data\\mms_db.mdf;Integrated Security=True"))
+            using(SqlConnection con = new SqlConnection(Connection_String.connection_string))
             {
                 cmd.Connection = con;
                 con.Open();

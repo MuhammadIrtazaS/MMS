@@ -15,21 +15,32 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="give-feedback my-form">
         <h1>Feedback Page</h1>
-        <textarea id="TextArea1" rows="10"></textarea>
+        <asp:TextBox ID="text_fld" runat="server" Height="86px" TextMode="MultiLine"></asp:TextBox>
         <div class="meals-rattings">
-            <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:DropDownList ID="meal_list" runat="server" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name">
                 <asp:ListItem>A</asp:ListItem>
                 <asp:ListItem>B</asp:ListItem>
                 <asp:ListItem>C</asp:ListItem>
             </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mms_dbConnectionString2 %>" SelectCommand="SELECT DISTINCT [name], [Id] FROM [meal]"></asp:SqlDataSource>
+            <style>
+                .rattings{
+                    display: flex;
+                }
+                .rattings tr{
+                    display: inline-block;
+                }
+            </style>
             <div class="rattings">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
+                <asp:RadioButtonList ID="rattings_list" runat="server" CssClass="rattings">
+                    <asp:ListItem Value="1">1</asp:ListItem>
+                    <asp:ListItem Value="2">2</asp:ListItem>
+                    <asp:ListItem Value="3">3</asp:ListItem>
+                    <asp:ListItem Value="4">4</asp:ListItem>
+                    <asp:ListItem Value="5">5</asp:ListItem>
+                </asp:RadioButtonList>
             </div>
         </div>
-        <button>Submit</button>
+        <asp:Button ID="send_btn" runat="server" Text="Send" OnClick="send_btn_Click" />
     </div>
 </asp:Content>

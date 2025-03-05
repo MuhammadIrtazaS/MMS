@@ -17,27 +17,15 @@
 
         <div class="data">
 
-            <asp:Table ID="Table1" runat="server">
-                <asp:TableRow runat="server" TableSection="TableHeader">
-                    <asp:TableCell runat="server">Meal Name</asp:TableCell>
-                    <asp:TableCell runat="server">Day</asp:TableCell>
-                    <asp:TableCell runat="server">Time</asp:TableCell>
-                    <asp:TableCell runat="server">Price</asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow runat="server">
-                    <asp:TableCell runat="server">Biryani</asp:TableCell>
-                    <asp:TableCell runat="server">Tuesday</asp:TableCell>
-                    <asp:TableCell runat="server">Morning</asp:TableCell>
-                    <asp:TableCell runat="server">250</asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow runat="server">
-                    <asp:TableCell runat="server">Fried Rice</asp:TableCell>
-                    <asp:TableCell runat="server">Friday</asp:TableCell>
-                    <asp:TableCell runat="server">Evening</asp:TableCell>
-                    <asp:TableCell runat="server">50</asp:TableCell>
-                </asp:TableRow>
-
-            </asp:Table>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                <Columns>
+                    <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                    <asp:BoundField DataField="time" HeaderText="time" SortExpression="time" />
+                    <asp:BoundField DataField="day" HeaderText="day" SortExpression="day" />
+                    <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:mms_dbConnectionString2 %>" SelectCommand="SELECT [name], [time], [day], [price] FROM [meal]"></asp:SqlDataSource>
         </div>
 
     </div>

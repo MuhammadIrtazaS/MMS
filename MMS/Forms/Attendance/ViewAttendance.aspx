@@ -15,13 +15,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content">
-        <div class="controls">
+        <!-- <div class="controls">
             <asp:DropDownList ID="DropDownList1" runat="server">
                 <asp:ListItem>January</asp:ListItem>
                 <asp:ListItem Selected="True">February</asp:ListItem>
                 <asp:ListItem>March</asp:ListItem>
             </asp:DropDownList>
-        </div>
+        </div> -->
         <div class="data">
             <asp:Table ID="Table1" runat="server" BackColor="White" CellPadding="5" CellSpacing="5">
                 <asp:TableRow runat="server" TableSection="TableHeader">

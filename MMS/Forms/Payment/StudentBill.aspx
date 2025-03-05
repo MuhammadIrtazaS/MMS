@@ -13,19 +13,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="student-bill">
-       
-          
-
-            <!-- Search Section -->
-            <div class="search-container">
-                <asp:DropDownList ID="ddlMonth" runat="server">
-                    <asp:ListItem Text="January" Value="January"></asp:ListItem>
-                    <asp:ListItem Text="February" Value="February"></asp:ListItem>
-                    <asp:ListItem Text="March" Value="March"></asp:ListItem>
-                    <asp:ListItem Text="April" Value="April"></asp:ListItem>
-                </asp:DropDownList>
-                
-            </div>
 
             <!-- Student Bill Table -->
             <div class="table-container">

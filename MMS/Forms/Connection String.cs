@@ -7,6 +7,6 @@ namespace MMS.Forms
 {
 	public class Connection_String
 	{
-		public static string connection_string = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Sami\\source\\repos\\SamiUlHaq27\\MMS\\MMS\\App_Data\\mms_db.mdf;Integrated Security=True;Encrypt=False";
+		public static string connection_string = "Data Source=.\\SQLEXPRESS;Initial Catalog=mms_db;Integrated Security=True;Encrypt=False";
 	}
 }

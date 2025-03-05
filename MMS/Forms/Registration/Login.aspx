@@ -28,18 +28,18 @@
 
             <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
 
-            <input id="Password1" type="password" />
+            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
 
             <div class="button">
 
 
-                <asp:Button ID="Button1" runat="server" Text="Login" />
+                <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
                
             </div>
 
 
 
-            <asp:LinkButton ID="LinkButton1" runat="server">click here to register</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Forms/Registration/Registration.aspx">click here to register</asp:LinkButton>
 
         </div>
 

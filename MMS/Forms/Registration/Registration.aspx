@@ -40,7 +40,7 @@
             <asp:Button ID="register_btn" runat="server" Text="Register" OnClick="register_btn_clicked" />
             </div>
 
-            <asp:LinkButton ID="LinkButton2" runat="server">Click here to login</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Forms/Registration/Login.aspx">Click here to login</asp:LinkButton>
 
 
         </div>

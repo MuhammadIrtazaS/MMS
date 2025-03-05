@@ -24,13 +24,13 @@ namespace MMS.Forms.Meals
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// TextBox1 control.
+        /// meal_name_fld control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox meal_name_fld;
 
         /// <summary>
         /// Label2 control.
@@ -42,13 +42,13 @@ namespace MMS.Forms.Meals
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// RadioButtonList1 control.
+        /// me_rl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList me_rl;
 
         /// <summary>
         /// Label3 control.
@@ -60,13 +60,13 @@ namespace MMS.Forms.Meals
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// day_dl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList day_dl;
 
         /// <summary>
         /// Label4 control.
@@ -78,21 +78,21 @@ namespace MMS.Forms.Meals
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// TextBox4 control.
+        /// price_fld control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox price_fld;
 
         /// <summary>
-        /// Button1 control.
+        /// save_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button save_btn;
     }
 }
