@@ -165,7 +165,10 @@ table thead {
 
 .mark-attendance {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    margin: auto;
 }
 
 .attendance-left {

@@ -18,7 +18,7 @@
             <div class="table-container">
                 <div class="data">
                     <asp:Label ID="Label1" runat="server" Text="TotalMeals" CssClass="heading"></asp:Label>
-                    <asp:Label ID="Label2" runat="server" Text="30" CssClass="value"></asp:Label>
+                    <asp:Label ID="total_meals_lbl" runat="server" Text="30" CssClass="value"></asp:Label>
                 </div>
 
                 <div class="data">

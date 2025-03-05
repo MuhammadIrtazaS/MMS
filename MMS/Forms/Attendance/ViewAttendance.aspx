@@ -15,36 +15,19 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content">
-        <!-- <div class="controls">
-            <asp:DropDownList ID="DropDownList1" runat="server">
-                <asp:ListItem>January</asp:ListItem>
-                <asp:ListItem Selected="True">February</asp:ListItem>
-                <asp:ListItem>March</asp:ListItem>
-            </asp:DropDownList>
-        </div> -->
         <div class="data">
-            <asp:Table ID="Table1" runat="server" BackColor="White" CellPadding="5" CellSpacing="5">
-                <asp:TableRow runat="server" TableSection="TableHeader">
-                    <asp:TableCell runat="server">Date</asp:TableCell>
-                    <asp:TableCell runat="server">Morning</asp:TableCell>
-                    <asp:TableCell runat="server">Evening</asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow runat="server">
-                    <asp:TableCell runat="server">12-06-2024</asp:TableCell>
-                    <asp:TableCell runat="server">180</asp:TableCell>
-                    <asp:TableCell runat="server">160</asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow runat="server">
-    <asp:TableCell runat="server">12-01-2025</asp:TableCell>
-    <asp:TableCell runat="server">170</asp:TableCell>
-    <asp:TableCell runat="server">150</asp:TableCell>
-</asp:TableRow>
-                <asp:TableRow runat="server">
-    <asp:TableCell runat="server">12-02-2024</asp:TableCell>
-    <asp:TableCell runat="server">200</asp:TableCell>
-    <asp:TableCell runat="server">100</asp:TableCell>
-</asp:TableRow>
-            </asp:Table>
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                <Columns>
+                    <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
+                    <asp:BoundField DataField="time" HeaderText="time" SortExpression="time" />
+                    <asp:BoundField DataField="meal_name" HeaderText="meal_name" SortExpression="meal_name" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:mms_dbConnectionString2 %>" SelectCommand="SELECT [date], [time], [meal_name] FROM [attendance] WHERE ([user_id] = @user_id)">
+                <SelectParameters>
+                    <asp:CookieParameter CookieName="user_id" DefaultValue="0" Name="user_id" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
         </div>
     </div>
 </asp:Content>

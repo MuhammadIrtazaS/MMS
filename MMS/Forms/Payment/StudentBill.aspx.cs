@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +12,26 @@ namespace MMS.Forms.Payment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HttpCookie ck = new HttpCookie("user_id");
+            ck.Value = "1";
+            Request.Cookies.Set(ck);
+            if (!(Request.Cookies.Get("user_id") is null))
+            {
+                string query = "SELECT * FROM [attendance] WHERE user_id = '" + Request.Cookies.Get("user_id").Value + "'";
+                SqlCommand cmd = new SqlCommand(query);
+                int total = 0;
+                using (SqlConnection con = new SqlConnection(Connection_String.connection_string))
+                {
+                    cmd.Connection = con;
+                    con.Open();
+                    SqlDataReader rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        total++;
+                    }
+                }
+                total_meals_lbl.Text = total.ToString();
+            }
         }
     }
 }

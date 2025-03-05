@@ -120,6 +120,7 @@
     <Content Include="Database Queries\tables.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Forms\Attendance\MarkAttendance.aspx" />
+    <Content Include="Forms\Attendance\ViewAttendanceAll.aspx" />
     <Content Include="Forms\Attendance\ViewAttendance.aspx" />
     <Content Include="Forms\CSS\Mealsstylesheet.css" />
     <Content Include="Forms\CSS\Registrationstylesheet.css" />
@@ -172,6 +173,13 @@
     </Compile>
     <Compile Include="Forms\Attendance\MarkAttendance.aspx.designer.cs">
       <DependentUpon>MarkAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Attendance\ViewAttendanceAll.aspx.cs">
+      <DependentUpon>ViewAttendanceAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Attendance\ViewAttendanceAll.aspx.designer.cs">
+      <DependentUpon>ViewAttendanceAll.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Attendance\ViewAttendance.aspx.cs">
       <DependentUpon>ViewAttendance.aspx</DependentUpon>

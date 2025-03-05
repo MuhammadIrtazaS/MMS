@@ -13,15 +13,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="payment-records">
-        <asp:DropDownList ID="DropDownList1" runat="server">
-            <asp:ListItem>January</asp:ListItem>
-            <asp:ListItem>February</asp:ListItem>
-            <asp:ListItem>March</asp:ListItem>
-            <asp:ListItem>April</asp:ListItem>
-            <asp:ListItem>May</asp:ListItem>
-            <asp:ListItem>June</asp:ListItem>
-            <asp:ListItem>july</asp:ListItem>
-        </asp:DropDownList>
 
 
          <div class="data">
