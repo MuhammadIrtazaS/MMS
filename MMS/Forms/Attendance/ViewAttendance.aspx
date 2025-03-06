@@ -16,7 +16,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content">
         <div class="data">
-            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" EmptyDataText="There are no data records to display.">
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" EmptyDataText="There are no data records to display." CssClass="grid-table" GridLines="None">
                 <Columns>
                     <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
                     <asp:BoundField DataField="time" HeaderText="time" SortExpression="time" />

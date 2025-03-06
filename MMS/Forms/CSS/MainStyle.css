@@ -300,3 +300,25 @@ input, select, button{
 .payment-records select{
     width:200px;
 }
+
+/*------------------------------------------- Grid Table ----------------------------------------*/
+
+.grid-table{
+    border: none;
+}
+
+.data div:first-child{
+    background-color: var(--secondary-color);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.grid-table th{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.grid-table td, th{
+    padding: 5px;
+    margin: 5px;
+}
