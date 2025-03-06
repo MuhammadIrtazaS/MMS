@@ -1,9 +1,10 @@
 ﻿CREATE TABLE [dbo].[attendance] (
-    [Id]        INT           IDENTITY (1, 1) NOT NULL,
-    [date]      DATE          NOT NULL,
-    [time]      VARCHAR (1)     NOT NULL,
-    [meal_name] VARCHAR(50)           NOT NULL,
+    [Id]        INT          IDENTITY (1, 1) NOT NULL,
+    [date]      DATE         NOT NULL,
+    [time]      VARCHAR (1)  NOT NULL,
+    [meal_name] VARCHAR (50) NOT NULL,
     [user_id]   VARCHAR (50) NOT NULL,
+    [meal_price] INT NOT NULL DEFAULT 0, 
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

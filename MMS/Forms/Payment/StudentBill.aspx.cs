@@ -19,7 +19,8 @@ namespace MMS.Forms.Payment
             {
                 string query = "SELECT * FROM [attendance] WHERE user_id = '" + Request.Cookies.Get("user_id").Value + "'";
                 SqlCommand cmd = new SqlCommand(query);
-                int total = 0;
+                int total_meals = 0;
+                int total_bill = 0;
                 using (SqlConnection con = new SqlConnection(Connection_String.connection_string))
                 {
                     cmd.Connection = con;
@@ -27,10 +28,12 @@ namespace MMS.Forms.Payment
                     SqlDataReader rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
-                        total++;
+                        total_meals++;
+                        total_bill += rdr.GetInt32(5);
                     }
                 }
-                total_meals_lbl.Text = total.ToString();
+                total_meals_lbl.Text = total_meals.ToString();
+                total_bill_lbl.Text = total_bill.ToString();
             }
         }
     }

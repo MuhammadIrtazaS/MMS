@@ -23,7 +23,7 @@
 
                 <div class="data">
                     <asp:Label ID="Label3" runat="server" Text="Total bill" CssClass="heading"></asp:Label>
-                    <asp:Label ID="Label4" runat="server" Text="5000" CssClass="value"></asp:Label>
+                    <asp:Label ID="total_bill_lbl" runat="server" Text="5000" CssClass="value"></asp:Label>
                 </div>
 
                 <div class="data">

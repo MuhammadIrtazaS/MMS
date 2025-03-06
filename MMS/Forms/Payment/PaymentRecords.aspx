@@ -23,34 +23,6 @@
              <asp:TableCell runat="server">Total Bill</asp:TableCell>
              <asp:TableCell runat="server">Status</asp:TableCell>
          </asp:TableRow>
-         <asp:TableRow runat="server">
-             <asp:TableCell runat="server">12-06-2024</asp:TableCell>
-             <asp:TableCell runat="server">180</asp:TableCell>
-             <asp:TableCell runat="server">25000</asp:TableCell>
-             <asp:TableCell runat="server">
-             <asp:CheckBox ID="CheckBox1" runat="server" /></asp:TableCell>
-         </asp:TableRow>
-          <asp:TableRow runat="server">
-     <asp:TableCell runat="server">12-01-2025</asp:TableCell>
-     <asp:TableCell runat="server">140</asp:TableCell>
-     <asp:TableCell runat="server">10000</asp:TableCell>
-     <asp:TableCell runat="server">
-     <asp:CheckBox ID="CheckBox2" runat="server" /></asp:TableCell>
- </asp:TableRow>
-          <asp:TableRow runat="server">
-     <asp:TableCell runat="server">12-02-2024</asp:TableCell>
-     <asp:TableCell runat="server">110</asp:TableCell>
-     <asp:TableCell runat="server">16000</asp:TableCell>
-     <asp:TableCell runat="server">
-     <asp:CheckBox ID="CheckBox3" runat="server" /></asp:TableCell>
- </asp:TableRow>
-          <asp:TableRow runat="server">
-     <asp:TableCell runat="server">12-05-2024</asp:TableCell>
-     <asp:TableCell runat="server">90</asp:TableCell>
-     <asp:TableCell runat="server">14000</asp:TableCell>
-     <asp:TableCell runat="server">
-     <asp:CheckBox ID="CheckBox4" runat="server" /></asp:TableCell>
- </asp:TableRow>
 
      </asp:Table>
  </div>

@@ -21,11 +21,12 @@ namespace MMS.Forms.Attendance
         {
             using (SqlConnection con = new SqlConnection(Connection_String.connection_string))
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO [attendance] (date, time, meal_name, user_id) VALUES (@date1, @time1, @meal_name1, @user_id1)");
-                cmd.Parameters.AddWithValue("@date1", date_fld.Text);
-                cmd.Parameters.AddWithValue("@time1", me_rl.SelectedValue);
-                cmd.Parameters.AddWithValue("@meal_name1", meals_list.SelectedItem.Text);
-                cmd.Parameters.AddWithValue("@user_id1", roll_no_fld.Text);
+                SqlCommand cmd = new SqlCommand("INSERT INTO [attendance] (date, time, meal_name, user_id, meal_price) VALUES (@date, @time, @meal_name, @user_id, @meal_price)");
+                cmd.Parameters.AddWithValue("@date", date_fld.Text);
+                cmd.Parameters.AddWithValue("@time", me_rl.SelectedValue);
+                cmd.Parameters.AddWithValue("@meal_name", meals_list.SelectedItem.Text);
+                cmd.Parameters.AddWithValue("@user_id", roll_no_fld.Text);
+                cmd.Parameters.AddWithValue("@meal_price", meals_list.SelectedItem.Value);
                 cmd.Connection = con;
                 con.Open();
 
