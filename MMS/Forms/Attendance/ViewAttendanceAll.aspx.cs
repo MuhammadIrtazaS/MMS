@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace MMS.Forms.Attendance
 {
-    public partial class ViewAttendance : System.Web.UI.Page
+    public partial class ViewAttendanceAll : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

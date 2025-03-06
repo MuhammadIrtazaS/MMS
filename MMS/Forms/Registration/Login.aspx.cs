@@ -35,6 +35,12 @@ namespace MMS.Forms.Registration
                     {
                         Response.Redirect("../Feedback/ViewFeedbacks.aspx");
                     }
+                    HttpCookie ck1 = new HttpCookie("user_id");
+                    HttpCookie ck2 = new HttpCookie("role");
+                    ck1.Value = rdr[0].ToString();
+                    ck2.Value = rdr[3].ToString();
+                    Response.Cookies.Add(ck1);
+                    Response.Cookies.Add(ck2);
                 }
             }
         }
